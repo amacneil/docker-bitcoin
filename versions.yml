@@ -139,7 +139,7 @@ xt:
     key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
     sha256: fc51558f73f2153866fc47d1ab7eebccd5c188e605f078155f2ff80290939184
 
-uasf-segwit:
+uasf:
   0.14.2:
     url: https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit0.3/bitcoin-0.14.2-bip148_segwit0.3-x86_64-linux-gnu.tar.gz
     asc_url: 
