@@ -19,12 +19,17 @@ RUN set -ex \
 ENV BITCOIN_VERSION 0.14.2
 ENV BITCOIN_URL https://uasf.bitcoinreminder.com/core-$BITCOIN_VERSION-uasfsegwit0.3/bitcoin-$BITCOIN_VERSION-bip148_segwit0.3-x86_64-linux-gnu.tar.gz
 ENV BITCOIN_SHA256 668ba1ae6d54307878e1e02d396b96e0bb3829b71735cb1992910cadf861db1f
+ENV BITCOIN_ASC_URL https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit0.3/SHA256SUMS.asc
+ENV BITCOIN_PGP_KEY 01EA5486DE18A882D4C2684590C8019E36C2E964
 
 # install bitcoin binaries
 RUN set -ex \
 	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
 	&& wget -qO $BITCOIN_DIST $BITCOIN_URL \
 	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
+	&& gpg --keyserver keyserver.ubuntu.com --recv-keys $BITCOIN_PGP_KEY \
+	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
+	&& gpg --verify bitcoin.asc \
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
 	&& rm bitcoin*
 
