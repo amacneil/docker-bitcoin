@@ -17,7 +17,7 @@ RUN set -ex \
 	&& chmod +x /usr/local/bin/gosu
 
 ENV BITCOIN_VERSION 0.14.2
-ENV BITCOIN_URL https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit0.3/bitcoin-0.14.2-bip148_segwit0.3-x86_64-linux-gnu.tar.gz
+ENV BITCOIN_URL https://uasf.bitcoinreminder.com/core-$BITCOIN_VERSION-uasfsegwit0.3/bitcoin-$BITCOIN_VERSION-bip148_segwit0.3-x86_64-linux-gnu.tar.gz
 ENV BITCOIN_SHA256 668ba1ae6d54307878e1e02d396b96e0bb3829b71735cb1992910cadf861db1f
 
 # install bitcoin binaries
