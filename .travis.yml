@@ -7,7 +7,7 @@ env:
   - BRANCH=core
   - BRANCH=unlimited
   - BRANCH=xt
-  
+
 script:
   - make test
 
