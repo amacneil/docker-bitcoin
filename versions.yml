@@ -143,3 +143,11 @@ xt:
     asc_url: https://github.com/bitcoinxt/bitcoinxt/releases/download/v0.11F/SHA256SUMS.asc
     key: 8F6EDE3A88F86BC6F98255D7F5D993791A778012
     sha256: fc51558f73f2153866fc47d1ab7eebccd5c188e605f078155f2ff80290939184
+    
+uasf:
+	  0.14.2:
+	    url: https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit0.3/bitcoin-0.14.2-bip148_segwit0.3-x86_64-linux-gnu.tar.gz
+	    asc_url: https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit0.3/SHA256SUMS.asc
+	    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
+	    sha256: 668ba1ae6d54307878e1e02d396b96e0bb3829b71735cb1992910cadf861db1f
+
