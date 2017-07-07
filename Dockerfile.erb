@@ -1,10 +1,11 @@
-FROM debian:stable
+FROM debian:stretch-slim
 
 RUN groupadd -r bitcoin && useradd -r -m -g bitcoin bitcoin
 
 RUN set -ex \
 	&& apt-get update \
-	&& apt-get install -qy --no-install-recommends ca-certificates dirmngr gosu gpg wget
+	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
+	&& rm -rf /var/lib/apt/lists/*
 
 ENV BITCOIN_VERSION <%= version %>
 ENV BITCOIN_URL <%= url %>
@@ -26,10 +27,6 @@ RUN set -ex \
 <% end -%>
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
 	&& rm bitcoin*
-
-RUN apt-get autoremove -qqy --purge ca-certificates wget gpg dirmngr \
-	&& apt-get clean \
-	&& rm -rf /var/lib/apt/lists/*
 
 ENV BITCOIN_DATA /data
 RUN mkdir $BITCOIN_DATA \
