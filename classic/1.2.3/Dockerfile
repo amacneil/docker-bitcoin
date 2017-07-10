@@ -13,12 +13,19 @@ ENV BITCOIN_SHA256 9eaa9a2ad72199f314a558b24424575084368ce5866bfbbb1a85429cd8fe6
 ENV BITCOIN_ASC_URL https://github.com/bitcoinclassic/bitcoinclassic/releases/download/v1.2.3/SHA256SUMS.asc
 ENV BITCOIN_PGP_KEY C07B28FD422F1B49E78889F5C2A5545EA91CCAE7
 
+# retreive pgp key
+RUN set -ex \
+	&& wget -qO ~/sks-pool.pem https://sks-keyservers.net/sks-keyservers.netCA.pem \
+	&& mkdir ~/.gnupg \
+	&& chmod 700 ~/.gnupg \
+	&& echo 'hkp-cacert ~/sks-pool.pem' >> ~/.gnupg/dirmngr.conf \
+	&& gpg --keyserver hkps://hkps.pool.sks-keyservers.net --recv-keys $BITCOIN_PGP_KEY
+
 # install bitcoin binaries
 RUN set -ex \
 	&& BITCOIN_DIST=$(basename $BITCOIN_URL) \
 	&& wget -qO $BITCOIN_DIST $BITCOIN_URL \
 	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
-	&& gpg --keyserver keyserver.ubuntu.com --recv-keys $BITCOIN_PGP_KEY \
 	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
 	&& gpg --verify bitcoin.asc \
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
