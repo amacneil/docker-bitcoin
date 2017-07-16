@@ -7,10 +7,10 @@ RUN set -ex \
 	&& apt-get install -qq --no-install-recommends ca-certificates dirmngr gosu gpg wget \
 	&& rm -rf /var/lib/apt/lists/*
 
-ENV BITCOIN_VERSION 0.14.2-uasfsegwit0.3
-ENV BITCOIN_URL https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit0.3/bitcoin-0.14.2-bip148_segwit0.3-x86_64-linux-gnu.tar.gz
-ENV BITCOIN_SHA256 668ba1ae6d54307878e1e02d396b96e0bb3829b71735cb1992910cadf861db1f
-ENV BITCOIN_ASC_URL https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit0.3/SHA256SUMS.asc
+ENV BITCOIN_VERSION 0.14.2-uasfsegwit1.0
+ENV BITCOIN_URL https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit1.0/bitcoin-0.14.2-uasfsegwit1.0-x86_64-linux-gnu.tar.gz
+ENV BITCOIN_SHA256 f07f6c29d63492120ff770ee50875d60354f420ee9272c419dd1321493a6d656
+ENV BITCOIN_ASC_URL https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit1.0/SHA256SUMS.asc
 ENV BITCOIN_PGP_KEY E463A93F5F3117EEDE6C7316BD02942421F4889F
 
 # install bitcoin binaries
