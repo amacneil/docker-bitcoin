@@ -66,6 +66,11 @@ core:
     key: E463A93F5F3117EEDE6C7316BD02942421F4889F
     sha256: f07f6c29d63492120ff770ee50875d60354f420ee9272c419dd1321493a6d656
 
+abc:
+  1.14.4:
+    url: https://download.bitcoinabc.org/0.14.4/linux/bitcoin-0.14.4-x86_64-linux-gnu.tar.gz
+    sha256: 4c39e84567e251dc299593643cd45d1efd7cc676e6d619ba506c3359a6a1c5f7
+
 btc1:
   1.14.3:
     url: https://github.com/btc1/bitcoin/releases/download/v1.14.3/bitcoin-1.14.3-x86_64-linux-gnu.tar.gz
