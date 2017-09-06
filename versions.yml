@@ -265,6 +265,9 @@ unlimited:
   1.1.1.0:
     url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/BUcash-1.1.1.0-linux64.tar.gz
     sha256: 562191a290e23adf24e1a0b6863765e8f2afeb2e61e20c9067fb1a8ef0c2ef92
+  1.1.1.1:
+    url: https://github.com/BitcoinUnlimited/BitcoinUnlimitedWebDownloads/raw/master/BUcash-1.1.1.1-linux64.tar.gz
+    sha256: bdc3e07ce2cacc42295d7559fbaae5ae60fed82479c5644ab7293bbea6b79a62
 
 xt:
   0.11.0B:
