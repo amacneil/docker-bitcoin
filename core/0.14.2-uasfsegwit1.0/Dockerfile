@@ -22,7 +22,7 @@ RUN set -ex \
 	&& wget -qO bitcoin.asc $BITCOIN_ASC_URL \
 	&& gpg --verify bitcoin.asc \
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
-	&& rm bitcoin*
+	&& rm -f bitcoin* BUcash*
 
 # create data directory
 ENV BITCOIN_DATA /data

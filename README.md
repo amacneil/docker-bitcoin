@@ -71,6 +71,12 @@ To run the latest version of btc1 Core:
 $ docker run amacneil/btc1
 ```
 
+To run the latest version of Bitcoin ABC:
+
+```
+$ docker run amacneil/bitcoin-abc
+```
+
 To run the latest version of Bitcoin Classic:
 
 ```

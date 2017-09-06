@@ -11,7 +11,7 @@ def build_image(branch, version, opts)
   client_version = opts["client_version"] || version
 
   run "docker build -t #{tag} #{dir}"
-  run "docker run --rm #{tag} sh -c 'test -n \"$(bitcoind -version | grep \"version v#{client_version}\")\"'"
+  run "docker run --rm #{tag} sh -c 'test -n \"$(bitcoind -version | grep -E \"version v?#{client_version}\")\"'"
 end
 
 if __FILE__ == $0

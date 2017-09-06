@@ -17,7 +17,7 @@ RUN set -ex \
 	&& wget -qO $BITCOIN_DIST $BITCOIN_URL \
 	&& echo "$BITCOIN_SHA256 $BITCOIN_DIST" | sha256sum -c - \
 	&& tar -xzvf $BITCOIN_DIST -C /usr/local --strip-components=1 --exclude=*-qt \
-	&& rm bitcoin*
+	&& rm -f bitcoin* BUcash*
 
 # create data directory
 ENV BITCOIN_DATA /data
