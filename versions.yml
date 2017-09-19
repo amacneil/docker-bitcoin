@@ -65,6 +65,17 @@ core:
     asc_url: https://uasf.bitcoinreminder.com/core-0.14.2-uasfsegwit1.0/SHA256SUMS.asc
     key: E463A93F5F3117EEDE6C7316BD02942421F4889F
     sha256: f07f6c29d63492120ff770ee50875d60354f420ee9272c419dd1321493a6d656
+  0.15.0:
+    url: https://bitcoin.org/bin/bitcoin-core-0.15.0/bitcoin-0.15.0-x86_64-linux-gnu.tar.gz
+    asc_url: https://bitcoin.org/bin/bitcoin-core-0.15.0/SHA256SUMS.asc
+    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
+    sha256: ed57f268d8b5ea5acfcb0666e801cf557a444720d8aed5e812071ab2e2913342
+  0.15.0.1:
+    url: https://bitcoin.org/bin/bitcoin-core-0.15.0.1/bitcoin-0.15.0.1-x86_64-linux-gnu.tar.gz
+    asc_url: https://bitcoin.org/bin/bitcoin-core-0.15.0.1/SHA256SUMS.asc
+    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
+    sha256: ae3efa47bf87a694a5368cd6fea96c9942fe9be7856720b5027c8902e46a88d1
+
 
 abc:
   0.14.1:
