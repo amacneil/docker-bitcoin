@@ -75,7 +75,11 @@ core:
     asc_url: https://bitcoin.org/bin/bitcoin-core-0.15.0.1/SHA256SUMS.asc
     key: 01EA5486DE18A882D4C2684590C8019E36C2E964
     sha256: ae3efa47bf87a694a5368cd6fea96c9942fe9be7856720b5027c8902e46a88d1
-
+  0.15.1:
+    url: https://bitcoin.org/bin/bitcoin-core-0.15.1/bitcoin-0.15.1-x86_64-linux-gnu.tar.gz
+    asc_url: https://bitcoin.org/bin/bitcoin-core-0.15.1/SHA256SUMS.asc
+    key: 01EA5486DE18A882D4C2684590C8019E36C2E964
+    sha256: 387c2e12c67250892b0814f26a5a38f837ca8ab68c86af517f975a2a2710225b
 
 abc:
   0.14.1:
