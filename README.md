@@ -1,5 +1,7 @@
 # Docker-Bitcoin
 
+**NOTE: This project is no longer maintained. Old versions are still available, but for updated versions of Bitcoin you should use a different image.**
+
 [![Build Status](https://img.shields.io/travis/amacneil/docker-bitcoin.svg)](https://travis-ci.org/amacneil/docker-bitcoin)
 [![License](https://img.shields.io/github/license/amacneil/docker-bitcoin.svg)](https://github.com/amacneil/docker-bitcoin/blob/master/LICENSE)
 
